@@ -24,7 +24,7 @@ export class PokemonListComponent implements OnInit {
 
   onChange() {
     this.searchedList = this.pokemonList.filter(pokemon => {
-      return pokemon.name.includes(this.searchInput);
+      return pokemon.name.toLowerCase().includes(this.searchInput.toLowerCase());
     });
   }
 }
